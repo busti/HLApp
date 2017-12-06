@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
         byte[] data  = repeat(pixel, LENGTH);
 
         data[0] = 0;
-        data[1] = 120;
+        data[1] = 0;
         data[2] = 0;
         data[3] = 0;
 
@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
             InetAddress address = InetAddress.getByName((String) button.getText());
 
             for (int i = 0; i < 255; i += 20) {
-                data[0] = (byte) i;
+                data[1] = (byte) i;
                 sendData(data, address);
             }
         } catch (UnknownHostException e) {
