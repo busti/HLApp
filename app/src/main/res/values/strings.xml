@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Honeylight App</string>
+
+    <string name="colors_rgb">red / green / blue</string>
+    <string name="colors_hsv">hue / saturation / value</string>
+
+    <string name="buttons_label">Apply to...</string>
+
+    <string name="esp2">esp2</string>
+    <string name="esp4">esp4</string>
+    <string name="esp6">esp6</string>
+    <string name="esp8">esp8</string>
+    <string name="esp1">esp1</string>
+    <string name="esp3">esp3</string>
+    <string name="esp5">esp5</string>
+    <string name="esp7">esp7</string>
+</resources>
