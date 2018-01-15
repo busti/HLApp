@@ -219,9 +219,9 @@ public class MainActivity extends AppCompatActivity {
                 (byte) (rgbw[2] * 255),
                 (byte) (rgbw[3] * 255)
         };
-        byte[] data  = repeat(pixel, LENGTH);
+        byte[] data  = repeat(pixel, LENGTH + 1 );
 
-        data[0] = 0;
+        data[0] = 2;
         data[1] = 0;
         data[2] = 0;
         data[3] = 0;
@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendData(byte[] data, InetAddress address) {
         try {
-            DatagramPacket packet = new DatagramPacket(data, LENGTH * 4, address, 1234);
+            DatagramPacket packet = new DatagramPacket(data, LENGTH * 4 + 4, address, 1234);
             socket.send(packet);
         } catch (IOException e) {
             Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
