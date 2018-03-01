@@ -23,7 +23,7 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PORT   = 1234;
-    private int LENGTH =   60;
+    private int LENGTH =   42;
 
     static {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         int[] buttons = {
                 R.id.esp1, R.id.esp2, R.id.esp3, R.id.esp4,
                 R.id.esp5, R.id.esp6, R.id.esp7, R.id.esp8,
+                R.id.all
 
         };
 

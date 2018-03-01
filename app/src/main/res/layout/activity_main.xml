@@ -12,8 +12,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:layout_width="match_parent"
@@ -82,17 +84,15 @@
             android:layout_height="30dp"
             android:max="1000" />
 
-        <GridLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="1"
-            >
+            android:columnCount="1">
 
             <TextView
+                android:layout_gravity="center_horizontal"
                 android:text="@string/buttons_label"
-                android:textSize="32dip"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="32dip" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -130,7 +130,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/esp7"
@@ -163,6 +164,12 @@
             </LinearLayout>
         </GridLayout>
 
+        <Button
+            android:id="@+id/all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10.0.0.255" />
+
         <TextView
             android:id="@+id/string_led_length"
             android:layout_width="match_parent"
@@ -175,7 +182,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberDecimal"
-            android:text="60" />
+            android:text="42" />
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
