@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PORT   = 1234;
-    private static final int LENGTH =   42;
+    private int LENGTH =   60;
 
     static {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -39,6 +40,14 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar hue;
     private SeekBar sat;
     private SeekBar val;
+
+    private EditText led_length2;
+
+    private void updateLENGTH(){
+
+        led_length2 = findViewById(R.id.led_length);
+        LENGTH = Integer.parseInt(led_length2.getText().toString());
+    }
 
     DatagramSocket socket;
 
@@ -149,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         int[] buttons = {
                 R.id.esp1, R.id.esp2, R.id.esp3, R.id.esp4,
                 R.id.esp5, R.id.esp6, R.id.esp7, R.id.esp8,
-                R.id.all
+
         };
 
         for (int b: buttons) {
@@ -213,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendData(Button button) {
+        updateLENGTH();
         byte[] pixel = {
                 (byte) (rgbw[1] * 255),
                 (byte) (rgbw[0] * 255),

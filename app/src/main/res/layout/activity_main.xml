@@ -163,11 +163,19 @@
             </LinearLayout>
         </GridLayout>
 
-        <Button
-            android:id="@+id/all"
+        <TextView
+            android:id="@+id/string_led_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="10.0.0.255" />
+            android:text="Led String Length" />
+
+        <EditText
+            android:id="@+id/led_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="60" />
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
